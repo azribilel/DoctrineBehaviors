@@ -13,7 +13,7 @@ class DoctrineBehaviorsExtension extends Extension
     /**
      * {@inheritDoc}
      */
-    public function load(array $configs, ContainerBuilder $container)
+    public function load(array $configs, ContainerBuilder $container): string
     {
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../../../config'));
         $loader->load('orm-services.yml');
